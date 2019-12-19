@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  ul
+  each val in messages
+    li= val.user + ": " + val.text + " Created at: " + val.added
+
+  a(href='/new') Add a new message

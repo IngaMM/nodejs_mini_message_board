@@ -1,0 +1,11 @@
+extends layout
+block content
+  h1= "Create a new message"
+  form(method='POST' action='/new')
+         div.form-group
+           label(for='user') User:
+           input#user.form-control(type='text' name='messageUser')
+         div.form-group
+           label(for='text') Text:
+           input#text.form-control(type='text' style="width: 300px;" name='messageText')
+         button(type='submit') Submit
